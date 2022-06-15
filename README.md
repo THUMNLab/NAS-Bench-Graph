@@ -14,7 +14,7 @@ bench = lightread('cora')
 
 The data is stored as a `dict` in the benchmark.
 To obtain the data, you declare an architecture by specifying its macro space and opertions.
-![arch](https://user-images.githubusercontent.com/17705534/173730383-8b9ed96f-5ca6-4205-b639-46aa746a9881.png)
+![arch](https://user-images.githubusercontent.com/17705534/173767528-eda1bc64-f4d8-4da1-a0e9-8470f55ccc6a.png)
 
 
 ```
@@ -46,8 +46,25 @@ info['para']
 
 # Obtain training process information
 
+Please download the data from https://figshare.com/articles/dataset/NAS-bench-Graph/20070371 
+Since we run each dataset for 3 times, each dataset is corresponding to 3 files.
+Choose one file to read
 
+```
+from readbench import read
+bench = read('cora0.bench')
+```
+
+Get training process information of an architecture at a certain epoch.
+
+```
+info = bench[arch.valid_hash()]
+epoch = 50
+# training performance, validation performance, test performance, training loss, validation loss, test loss, and current best test performance at epoch 50 
+print(info['dur'][epoch])
+```
 
 # Example usage of NNI and AutoGL
 You can refer to `runnni.py` to use methods in NNI.
+
 For usage of `AutoGL`, please refer to the `agnn` branch in `AutoGL`.
