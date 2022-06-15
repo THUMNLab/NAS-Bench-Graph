@@ -5,6 +5,7 @@ Graph neural architecture search (GraphNAS) has recently aroused considerable at
 ## Usage 
 
 You can use the benchmark by this repository.
+
 At first, read the benchmark of a certain dataset.
 
 ```
@@ -13,6 +14,7 @@ bench = lightread('cora')
 ```
 
 The data is stored as a `dict` in the benchmark.
+
 To obtain the data, you declare an architecture by specifying its macro space and opertions.
 ![arch](https://user-images.githubusercontent.com/17705534/173767528-eda1bc64-f4d8-4da1-a0e9-8470f55ccc6a.png)
 
@@ -23,6 +25,7 @@ arch = Arch([0, 1, 2, 1], ['gcn', 'gin', 'fc', 'cheb'])
 ```
 
 The macro space is described by a list of integers, indicating the input feature map of each layer (0 for the raw input, 1 for the feature map of the 1st layer, etc.)
+
 You can declare the architecture by any topological order. You can also declare the architecture as follows.
 
 ```
@@ -30,6 +33,7 @@ arch = Arch([0, 1, 1, 2], ['gcn', 'cheb', 'gin', 'fc'])
 ```
 
 The you can get the data by the look-up table.
+
 In this repository, you can only obatain valid/test performance, latency and number of parameters. Refer to the next part if you want infomation of training process.
 
 ```
@@ -47,6 +51,7 @@ info['para']
 # Obtain training process information
 
 Please download the data from https://figshare.com/articles/dataset/NAS-bench-Graph/20070371 
+
 Since we run each dataset for 3 times, each dataset is corresponding to 3 files.
 Choose one file to read
 
