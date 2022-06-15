@@ -1,6 +1,5 @@
 from distutils.command.sdist import sdist
 import random
-import torch
 import json
 
 link_list = [
