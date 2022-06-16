@@ -21,16 +21,16 @@ gnn_list = [
     "cheb",  # chebnet
     "sage",  # sage
     "arma",
-    "graph",  
-    "fc",  # skip connection
+    "graph",  # k-GNN
+    "fc",  # fully-connected
     "skip"  # skip connection
 ]
 
 gnn_list_proteins = [
     "gcn",  # GCN
-    "sage",  # chebnet
+    "sage",  # sage
     "arma",
-    "fc",  # skip connection
+    "fc",  # fully-connected
     "skip"  # skip connection
 ]
 
