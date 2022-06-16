@@ -34,7 +34,7 @@ arch = Arch([0, 1, 1, 2], ['gcn', 'cheb', 'gin', 'fc'])
 
 The you can get the data by the look-up table.
 
-In this repository, you can only obatain valid/test performance, latency and number of parameters. Refer to the next part if you want infomation of training process.
+In this repository, you can only obatain valid/test performance, latency and number of parameters. Refer to the next part if you want information of training process.
 
 ```
 info = bench[arch.valid_hash()]
