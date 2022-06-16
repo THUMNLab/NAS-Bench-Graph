@@ -1,5 +1,5 @@
 import pickle
-from arch import all_archs
+from architecture import all_archs
 
 def light_read(dname):
     f = open("light/{}.bench".format(dname), "rb")
