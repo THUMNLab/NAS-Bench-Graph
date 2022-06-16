@@ -20,7 +20,7 @@ To obtain the data, you declare an architecture by specifying its macro space an
 
 
 ```
-from hpo import Arch
+from arch import Arch
 arch = Arch([0, 1, 2, 1], ['gcn', 'gin', 'fc', 'cheb'])
 ```
 
