@@ -8,8 +8,8 @@ from nni.retiarii import model_wrapper
 from nni.retiarii.evaluator import FunctionalEvaluator
 import nni.retiarii.strategy as strategy
 
-from arch import gnn_list, gnn_list_proteins
-from arch import all_archs, HP, Arch
+from architecture import gnn_list, gnn_list_proteins
+from architecture import all_archs, HP, Arch
 from readbench import light_read
 from nni.retiarii.experiment.pytorch import RetiariiExperiment, RetiariiExeConfig
 dnames = ['cora', 'citeseer', 'pubmed', 'cs', 'physics', 'photo', 'computers', 'arxiv', 'proteins']
