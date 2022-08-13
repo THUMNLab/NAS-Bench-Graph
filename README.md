@@ -67,3 +67,6 @@ NAS-Bench-Graph can be used together with other libraries such AutoGL and NNI.
 For the usage of [AutoGL](https://github.com/THUMNLab/AutoGL), please refer to the [agnn branch](https://github.com/THUMNLab/AutoGL/tree/agnn).
 
 You can also refer to `runnni.py` to use the benchmark together with [NNI](https://github.com/microsoft/nni/).
+
+## Install from PyPI
+You can directly install our benchmark by `pip install nas_bench_graph`
