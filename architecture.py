@@ -1,4 +1,3 @@
-from distutils.command.sdist import sdist
 import random
 import json
 
