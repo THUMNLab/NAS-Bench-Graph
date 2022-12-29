@@ -2,11 +2,15 @@
 
 This repository provides the official codes and all evaluated architectures for NAS-Bench-Graph, a tailored benchmark for graph neural architecture search.
 
+Yijian Qin, Ziwei Zhang, Xin Wang, Zeyang Zhang, Wenwu Zhu, [NAS-Bench-Graph: Benchmarking Graph Neural Architecture Search](https://openreview.net/pdf?id=bBff294gqLp) (NeurIPS 2022)
+
+## Install from PyPI
+You can directly install our benchmark by `pip install nas_bench_graph`
 
 ## Usage 
 First, read the benchmark of a certain dataset by specifying the name. The nine supported datasets are: cora, citeseer, pubmed, cs, physics, photo, computers, arxiv, and proteins. For example, for the Cora dataset:
 ```
-from readbench import lightread
+from nas_bench_graph import lightread
 bench = lightread('cora')
 ```
 The data is stored as a `dict` in Python.
@@ -16,7 +20,7 @@ We consider the macro space as a directed acyclic graph (DAG) and constrain the 
 ![arch](https://user-images.githubusercontent.com/17705534/173767528-eda1bc64-f4d8-4da1-a0e9-8470f55ccc6a.png)
 
 ```
-from architecture import Arch
+from nas_bench_graph import Arch
 arch = Arch([0, 1, 2, 1], ['gcn', 'gin', 'fc', 'cheb'])
 # 0 means the inital computing node is connected to the input node
 # 1 means the next computing node is connected to the first computing node
@@ -44,7 +48,7 @@ info['para']         # number of parameters
 For the complete benchmark, please downloadfrom https://figshare.com/articles/dataset/NAS-bench-Graph/20070371, which contains the training/validation/testing performance at each epoch. Since we run each dataset with three random seeds, each dataset has 3 files, e.g.,
 
 ```
-from readbench import read
+from nas_bench_graph import read
 bench = read('cora0.bench')   # cora1.bench and cora2.bench 
 ```
 
@@ -68,5 +72,16 @@ For the usage of [AutoGL](https://github.com/THUMNLab/AutoGL), please refer to t
 
 You can also refer to `runnni.py` to use the benchmark together with [NNI](https://github.com/microsoft/nni/).
 
-## Install from PyPI
-You can directly install our benchmark by `pip install nas_bench_graph`
+
+## Citation
+If you find that NAS-Bench-Graph helps your research, please consider citing it:
+
+```
+@inproceedings{qin2022nas,
+  title     = {NAS-Bench-Graph: Benchmarking Graph Neural Architecture Search},
+  author    = {Qin, Yijian and Zhang, Ziwei and Wang, Xin and Zhang, Zeyang and Zhu, Wenwu},
+  booktitle = {Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track}
+  year      = {2022}
+}
+```
+
